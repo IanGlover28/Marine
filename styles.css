@@ -1,0 +1,592 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --primary-color: #FF6565;
+    --background-color: #ffffff;
+    --text-color: #000000;
+}
+
+
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('fonts/SourceSansPro-Regular.woff2') format('woff2'),
+         url('fonts/SourceSansPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "icomoon";
+    src: url("fonts/icomoon.eot");
+    src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"),
+         url("fonts/icomoon.woff") format("woff"),
+         url("fonts/icomoon.ttf") format("truetype"),
+         url("fonts/icomoon.svg#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+/* Global styles */
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: url('esmonde-yong-wFpJV5EWrSM-unsplash.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the entire area */
+    color: var(--text-color);
+    height: 100vh; /* Makes sure the body takes the full viewport height */
+    margin: 0; /* Removes default margin */
+
+}
+
+.cta-button {
+    font-family: 'Source Sans Pro', cursive;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Hero Styles */
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    padding: 40px 0;
+	height: 50px;
+}
+
+header ul {
+    display: flex;
+    list-style-type: none; /* Removes the default list style */
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end; /* Aligns the list items to the right */
+}
+
+header ul li {
+    margin-right: 30px; /* Adds space between list items */
+}
+
+
+
+header a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none; /* Removes underline from links */
+    font-weight: bold;
+}
+
+header li a:hover {
+    color: #FF6565;
+}
+
+nav {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center all items */
+    padding: 10px; /* Add some padding */
+}
+
+.label-container {
+    display: flex; /* Keep labels in a row */
+    position: absolute; /* Position them on the same line */
+    left: 10px; /* Adjust as needed */
+}
+
+.logo-container {
+    flex: 1; /* Allows the logo to take available space in the center */
+    display: flex;
+    justify-content: center; /* Centers the logo */
+}
+
+.logo {
+    max-width: 50%; /* Responsive logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Hide labels by default */
+.holberton_school-icon-menu,
+.icon-x {
+    display: none; /* Hide labels initially */
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 100px;
+    margin-top: 60px;
+}
+
+.hero-content h1 {
+    font-size: 32px;
+    color:#ffffff;
+}
+
+.hero-content p {
+    font-size: 16px;
+    margin-bottom: 50px;
+    color:#ffffff;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e54d4d;
+    opacity: 0.9;
+}
+
+.cta-description {
+    font-size: 1rem; 
+    margin-top: 75px; 
+    color: #ffffff; 
+}
+
+.what-we-do {
+    text-align: center; /* Center align text in the section */
+    padding: 50px; /* Add padding for spacing */
+    margin-top: 150px;
+}
+
+.what-we-do h2 {
+    margin-bottom: 50px; /* Space below the section title */
+    font-weight: 500px;
+}
+
+.what-we-do p {
+    font-weight: 300px;
+    font-size: 16px;
+    max-width: 600px; /* Set a maximum width for the paragraph */
+    margin: 0 auto 30px; /* Center the paragraph and set bottom margin */
+    line-height: 1.5; /* Optional: improve readability */
+}
+
+
+.projects-gallery {
+    text-align: center;
+    padding: 20px;
+  }
+  .projects {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .project {
+    width: 250px;
+    text-align: center;
+  }
+  .project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+
+.services {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap */
+    padding: 20px;
+    gap: 20px; /* Space between items */
+}
+
+.service {
+    flex: 1 1 calc(25% - 20px); /* Adjust for 4 items in a row with spacing */
+    max-width: calc(25% - 20px); /* Maximum width for each service card */
+    background-color: #fff; /* White background for each service */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    text-align: center; /* Center text within each service card */
+}
+
+.service span {
+    display: inline-block;
+    font-size: 70px; /* Icon size */
+    color: #FF6565;
+    margin-bottom: 10px; /* Space below the icon */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition for hover effect */
+}
+
+.service:hover {
+    transform: translateY(-5px); /* Lift effect */
+    background-color: #2980b9; /* Darker background on hover */
+}
+
+/* Hover effect for the icons */
+.service span:hover {
+    transform: scale(1.2); /* Scale up the icon */
+    color: #f39c12; /* Change color on hover */
+}
+
+.service p {
+    margin-top: 20px;
+}
+
+.our-results {
+    text-align: center; /* Center align text in the section */
+    padding: 50px; /* Add padding for spacing */
+    margin-top: 80px;
+    background-image: url(ricardo-resende--zsjda8Mfq4-unsplash.jpg);
+    background-size: cover;
+}
+
+.our-results h2 {
+    margin-bottom: 50px; /* Space below the section title */
+    font-weight:200px;
+    color:#ffffff;
+    font-size: 32px;
+}
+
+.our-results p {
+    font-weight: 100px;
+    font-size: 16px;
+    color:#ffffff ;
+    max-width: 600px; /* Set a maximum width for the paragraph */
+    margin: 0 auto 30px; /* Center the paragraph and set bottom margin */
+    line-height: 1.5; /* Optional: improve readability */
+}
+
+.results {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap */
+    padding: 30px;
+    gap: 40px; /* Space between items */
+}
+
+.result {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.pentagon {
+    width: 140px; /* Width of the pentagon */
+    height: 140px; /* Height of the pentagon */
+    background-color: #ff6b6b; /* Color of the pentagon */
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); /* Pentagon shape */
+    margin: 0 auto 10px; /* Center the pentagon and add space below */
+}
+
+
+.result h3 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 32px;
+    text-align: center;
+}
+
+.result p {
+    position: absolute;
+    top: 30%; /* Adjusted for spacing */
+    max-width: 600px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1;
+    margin: 40px 0; /* Added margin for spacing */
+    width: 70%;
+
+
+}
+
+
+
+.map-section {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.info-text {
+    padding: 30px;
+}
+
+.map {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    margin-top: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+ 
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #e98c7e;
+}
+
+footer {
+    background-color: #4772aa; 
+    padding: 20px; 
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+footer section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .section-items {
+    display: flex;
+    flex-direction: row;
+    gap: 650px; 
+}
+
+footer img {
+    width: 120px;
+    height: auto;
+}
+
+footer .section-items div {
+    display: flex; 
+    gap: 10px; 
+}
+
+footer i {
+    font-size: 20px; 
+    color: #ffffff; 
+    transition: color 0.3s ease;
+}
+
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 0;
+    color: #ffffff;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .service {
+        flex: 1 1 calc(50% - 20px); /* 2 items in a row on tablets */
+        max-width: calc(50% - 20px);
+    }
+
+    .result {
+        flex: 1 1 calc(50% - 20px); /* 2 items in a row on tablets */
+        max-width: calc(50% - 20px);
+    }
+
+    .map-section {
+        flex-direction: column;
+    }
+
+    .map {
+        display: none;
+    }
+    
+    #contact-form {
+        gap: 10px; /* Adjust spacing for smaller screens */
+    }
+
+    footer .section-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; 
+    }
+}
+
+
+@media (max-width: 425px) {
+    .logo {
+        max-width: 70%; /* Responsive logo */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .label-container {
+        display: flex; /* Show labels on small screens */
+    }
+
+    .menu-toggle.active .holberton_school-icon-menu {
+        display: block; /* Show menu icon when active */
+    }
+    
+    .menu-toggle.active .icon-x {
+        display: none; /* Hide close icon when active */
+    }
+    
+    .menu-toggle:not(.active) .holberton_school-icon-menu {
+        display: block; /* Show menu icon when not active */
+    }
+    
+    .menu-toggle:not(.active) .icon-x {
+        display: none; /* Hide close icon when not active */
+    }
+
+
+
+    .nav-links {
+        display: none; /* Hide nav links initially */
+        background: white; /* Optional: background for dropdown */
+        position: absolute;
+        top: 100%; /* Position below the menu */
+        left: 0;
+        right: 0; /* Full width */
+        z-index: 10; /* Ensure it appears above other elements */
+    }
+
+    .nav-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-links li {
+        padding: 1rem; /* Adjust padding as necessary */
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #000; /* Adjust color as necessary */
+    }
+
+
+    
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 10px;
+        right: 0;
+        background:transparent;
+        width: 100%; /* Full width */
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when active */
+        margin-bottom: 90px ;
+    }
+
+    header {
+        display: flex;
+      
+    }
+
+    header ul {
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Full width */
+    }
+
+    header ul li {
+        margin: 10px 0; /* Space between items */
+        text-align: center; /* Center align text */
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust heading size for mobile */
+    }
+
+    p {
+        font-size: 14px; /* Adjust paragraph size for mobile */
+    }
+
+    .service {
+        flex: 1 1 100%; /* 1 item in a row on mobile */
+        max-width: 100%;
+    }
+
+    
+
+    .hero-content {
+        max-width: 100%;
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    .what-we-do {
+        margin-top: 50px;
+    }
+
+    .results {
+        gap: 15px; /* Reduce space between items on mobile */
+    }
+
+
+    .result {
+        flex: 1 1 100%; /* 1 item in a row on mobile */
+        max-width: 100%;
+        padding: 50px;
+    }
+
+    .container {
+        width: 80px; /* Adjusted width for smaller screens */
+        height: 80px; /* Adjusted height for smaller screens */
+    }
+
+    .pentagon {
+        position: relative;
+        bottom:50px;
+        
+    }
+
+   
+  
+   
+
+    footer .section-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px; 
+    }
+    
+    
+}
