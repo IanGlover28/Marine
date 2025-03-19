@@ -7,12 +7,32 @@
 
 /* Variables */
 :root {
-    --primary-color: #FF6565;
+    --primary-color: #0b3aa1;
     --background-color: #ffffff;
     --text-color: #000000;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeIn 1s ease-in-out; }
 
+
+nav {
+    animation: fadeInDown 0.8s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 @font-face {
     font-family: 'Source Sans Pro';
@@ -39,7 +59,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Source Sans Pro', sans-serif;
-    background: url('esmonde-yong-wFpJV5EWrSM-unsplash.jpg') no-repeat center center;
+    background: url('vecteezy_smiling-woman-in-construction-safety-vest_54353229.jpg') no-repeat center center;
     background-size: cover; /* Ensures the image covers the entire area */
     color: var(--text-color);
     height: 100vh; /* Makes sure the body takes the full viewport height */
@@ -49,14 +69,111 @@ body {
 
 .cta-button {
     font-family: 'Source Sans Pro', cursive;
-    background-color: var(--primary-color);
+    background-color: #4c8cf2;
     color: #fff;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
 }
 
+.cta-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+ 
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #003995;
+}
+
 /* Hero Styles */
+
+
+.top-bar {
+    background: #0158b5;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    gap: 30px;
+}
+
+.contact-info {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.contact-info span {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #ffcc00;
+}
+
+/* ✅ Responsive Design for 425px and below */
+@media (max-width: 425px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .contact-info {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-info p {
+        font-size: 0.85rem;
+    }
+
+    .social-links {
+        display: none;
+        justify-content: center;
+    }
+
+    .social-links a {
+        font-size: 1rem;
+    }
+}
+
+
 
 
 header {
@@ -88,7 +205,7 @@ header a {
 }
 
 header li a:hover {
-    color: #FF6565;
+    color: #65a0ff;
 }
 
 nav {
@@ -154,7 +271,7 @@ nav {
 }
 
 .cta-button {
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
     color: #fff;
     padding: 15px 30px;
     text-decoration: none;
@@ -162,10 +279,7 @@ nav {
     transition: background-color 0.3s;
 }
 
-.cta-button:hover {
-    background-color: #e54d4d;
-    opacity: 0.9;
-}
+
 
 .cta-description {
     font-size: 1rem; 
@@ -174,23 +288,63 @@ nav {
 }
 
 .what-we-do {
-    text-align: center; /* Center align text in the section */
-    padding: 50px; /* Add padding for spacing */
-    margin-top: 150px;
+    text-align: center;
+    padding: 40px 20px;
+    background: #f9f9f9;
 }
 
 .what-we-do h2 {
-    margin-bottom: 50px; /* Space below the section title */
-    font-weight: 500px;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
 }
 
 .what-we-do p {
-    font-weight: 300px;
-    font-size: 16px;
-    max-width: 600px; /* Set a maximum width for the paragraph */
-    margin: 0 auto 30px; /* Center the paragraph and set bottom margin */
-    line-height: 1.5; /* Optional: improve readability */
+    max-width: 800px;
+    margin: 0 auto 30px;
+    color: #666;
+    font-size: 1.1rem;
 }
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.service-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card span {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
 
 
 .projects-gallery {
@@ -343,6 +497,11 @@ nav {
 
 .info-text {
     padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
 }
 
 .map {
@@ -352,20 +511,7 @@ nav {
     margin-top: 20px;
 }
 
-.cta-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: rgb(0, 0, 0);
- 
-    text-decoration: none;
-    border-radius: 5px;
-}
 
-.cta-button:hover {
-    background-color: #e98c7e;
-}
 
 footer {
     background-color: #4772aa; 
@@ -444,7 +590,10 @@ footer p {
 }
 
 
+
 @media (max-width: 425px) {
+
+    
     .logo {
         max-width: 70%; /* Responsive logo */
         height: auto; /* Maintain aspect ratio */
@@ -578,7 +727,44 @@ footer p {
     }
 
    
+    .map-section {
+        display: flex;
+        flex-direction: column; /* Stack items in a column */
+        align-items: center; /* Center content horizontally */
+        text-align: center;
+        gap: 20px; /* Adds space between info-text and map */
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    .info-text {
+        padding: 30px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+    }
+    
+    .map {
+        width: 100%;
+        max-width: 600px;
+        height: 450px;
+        border: 0;
+    }
+    
+    .cta-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    
   
+    
    
 
     footer .section-items {
